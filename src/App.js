@@ -1,26 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Login from "./pages/Login";
+import Dashoboard from "./pages/Dashboard";
+import PropTypes from "prop-types";
 
-function App() {
+// const mockDataBase = [
+//   {
+//     username: "x",
+//     products: [
+//       {
+//         id: 1,
+//         name: "T-shirt",
+//         price: 25,
+//       },
+//       {
+//         id: 2,
+//         name: "Pants",
+//         price: 50,
+//       },
+//     ],
+//   },
+//   {
+//     username: "2",
+//     products: [
+//       {
+//         id: 1,
+//         name: "Shoes",
+//         price: 100,
+//       },
+//       {
+//         id: 2,
+//         name: "Sock",
+//         price: 20,
+//       },
+//       {
+//         id: 2,
+//         name: "Cap",
+//         price: 30,
+//       },
+//     ],
+//   },
+// ];
+
+function App({ isLoggedin, username, products }) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isLoggedin ? (
+        <Dashoboard username={username} products={products} />
+      ) : (
+        <Login />
+      )}
     </div>
   );
 }
+
+App.propTypes = {
+  isLoggedin: PropTypes.bool,
+  username: PropTypes.string,
+  products: PropTypes.array,
+};
 
 export default App;
