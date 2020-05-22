@@ -2,7 +2,7 @@ import React from "react";
 import Dashboard from "./";
 import { mount } from "enzyme";
 
-it("Valid Total valid", () => {
+it("Total amount payable", () => {
   const props = {
     username: "João",
     products: [
