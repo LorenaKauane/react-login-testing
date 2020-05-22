@@ -7,7 +7,7 @@ export default function Login() {
       Username:
       <input />
       Passoword: <input />
-      <button>Sign</button>
+      <button onClick={() => alert("Hello")}>Sign</button>
     </div>
   );
 }

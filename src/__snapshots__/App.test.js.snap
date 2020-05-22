@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the Dashboard for the logged in user 1`] = `
+<App
+  isLoggedin={true}
+  products={
+    Array [
+      Object {
+        "id": 1,
+        "name": "T-shirt",
+        "price": 25,
+      },
+      Object {
+        "id": 2,
+        "name": "Pants",
+        "price": 50,
+      },
+    ]
+  }
+  username="Pedro"
+>
+  <div
+    className="App"
+  >
+    <Dashboard
+      products={
+        Array [
+          Object {
+            "id": 1,
+            "name": "T-shirt",
+            "price": 25,
+          },
+          Object {
+            "id": 2,
+            "name": "Pants",
+            "price": 50,
+          },
+        ]
+      }
+      username="Pedro"
+    >
+      <div>
+        <p>
+          Welcome, 
+          Pedro
+          !
+        </p>
+        <ul>
+          <li
+            key="1"
+          >
+            <p>
+              Name: 
+              T-shirt
+            </p>
+            |
+            <p>
+              Price: 
+              25
+            </p>
+          </li>
+          <li
+            key="2"
+          >
+            <p>
+              Name: 
+              Pants
+            </p>
+            |
+            <p>
+              Price: 
+              50
+            </p>
+          </li>
+        </ul>
+        <strong>
+          Total:
+          75
+        </strong>
+      </div>
+    </Dashboard>
+  </div>
+</App>
+`;
+
+exports[`should render the Dashboard for the logged in user without Products 1`] = `
+<App
+  isLoggedin={true}
+  products={null}
+  username="Joana"
+>
+  <div
+    className="App"
+  >
+    <Dashboard
+      products={null}
+      username="Joana"
+    >
+      <div>
+        <p>
+          Welcome, 
+          Joana
+          !
+        </p>
+        <strong>
+          Joana
+           has no registered products
+        </strong>
+      </div>
+    </Dashboard>
+  </div>
+</App>
+`;
+
+exports[`should render the Login for the non logged in user 1`] = `
+<App
+  isLoggedin={false}
+  products={Array []}
+  username={null}
+>
+  <div
+    className="App"
+  >
+    <Login>
+      <div>
+        <strong>
+          Hello stranger. Sign in to continue.
+        </strong>
+        Username:
+        <input />
+        Passoword: 
+        <input />
+        <button
+          onClick={[Function]}
+        >
+          Sign
+        </button>
+      </div>
+    </Login>
+  </div>
+</App>
+`;
